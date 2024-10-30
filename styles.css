@@ -1,0 +1,294 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: lightblue; /* Ensure body background is light blue */
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #333;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#menu a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: url('assets/images/car_cursor.cur'), auto;
+}
+
+#menu a:hover {
+    color: #ffcc00; /* Change to a bright color on hover */
+}
+
+a.button {
+    position: relative;
+    overflow: hidden;
+}
+
+a.button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+}
+
+a.button:hover::after {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+}
+
+section {
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Intro Section */
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #282c34; /* Dark background for intro */
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure it is above other content */
+}
+
+#intro-content {
+    position: relative; /* Ensure positioning for z-index */
+    z-index: 2; /* Above intro background */
+}
+
+#profile-image {
+    width: 400px;
+    height: 700px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    position: relative; /* Ensure positioning for z-index */
+    z-index: 3; /* Ensure image is above intro content */
+    transition: transform 0.5s ease;
+}
+
+#profile-image:hover {
+    transform: scale(1.1);
+}
+
+#intro-text {
+    font-size: 3em;
+    color: #61dafb; /* React logo blue color */
+}
+
+/* About Section */
+#about {
+    background: #f1f1f1; /* Light grey background for About section */
+    color: #333;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px; /* Adjust padding as necessary */
+}
+
+.info-box {
+    flex: 1 1 45%; /* Adjust width as necessary */
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.left {
+    background-color: rgb(181, 155, 241); /* Red background for the left boxes */
+}
+
+.right {
+    background-color: rgb(224, 149, 168); /* Green background for the right boxes */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+/* Projects Section */
+#projects {
+    background: #ffffff;
+    padding: 50px 0;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between project cards */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.project {
+    perspective: 1000px; /* Enables 3D space for the flip effect */
+    width: 500px; /* Adjust size as needed */
+    height: 400px; /* Adjust size as needed */
+    margin: 20px; /* Space between project cards */
+}
+
+.project-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Ensures children are rendered in 3D */
+}
+
+.project:hover .project-inner {
+    transform: rotateY(180deg); /* Flips the project card */
+}
+
+.project-front, .project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not facing the viewer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.project-front {
+    background-color: white; /* Color of the front side */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
+}
+
+.project-back {
+    background-color: #333; /* Color of the back side */
+    color: white; /* Text color for back side */
+    transform: rotateY(180deg); /* Hides the back side initially */
+}
+
+.project-image {
+    width: 100%; /* Makes the image fill the width of the box */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin-bottom: 15px; /* Adds some space below the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Footer */
+footer {
+    background: #282c34;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Ensure the page uses the full height */
+html, body {
+    min-height: 100%; /* Ensure the page height extends to cover the viewport */
+    overflow: visible; /* Make sure content isn't being hidden */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+/* Add additional padding to the projects section */
+#projects {
+    background: #e6f4f5;
+    padding: 100px 0; /* Increased padding to extend the page */
+}
+
+#contact {
+    background: #f5f5f5;
+    color: #333;
+    padding: 50px;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form label {
+    text-align: left;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555; /* Darker shade on hover */
+}
+
+#lexilink .project-image {
+    width: 90%; /* Shrink the image width to 80% of the container */
+    height: auto; /* Keep the aspect ratio intact */
+    margin-bottom: 15px; /* Space below the image */
+    object-fit: cover; /* Ensure image covers the available area without distortion */
+}
+
+#intro-text {
+    font-size: 4em; /* Increase the font size for the main heading */
+    color: #61dafb; /* Optional: Keep the existing color */
+}
+
+#intro-content p {
+    font-size: 1.25em; /* Increase the font size for the paragraph */
+    color: white; /* Optional: Change color for better contrast */
+}
+
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div id="menu">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a> 
+        <a href="resume.pdf" target="_blank">Resume</a>
+    </div>
+    
+    
+    <!-- Intro Section -->
+    <section id="intro">
+        <div id="intro-content">
+            <img src="assets\images\SHAUN_GR12_GRADUATION.jpg" alt="Shaun's Photo" id="profile-image">
+            <h1 id="intro-text">Hey, I'm Shaun!</h1>
+            <p>Take a Glimpse into my World!</p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="info-container">
+            <div class="info-box left">
+                <h3>Undergraduate Student</h3>
+                <p>I am a second-year Engineering Science student at the University of Toronto, pursuing 
+                a major in Electrical and Computer Engineering with a minor in 
+                Artificial Intelligence. My academic journey is complemented by my 
+                involvement in two dynamic clubs: the University of Toronto Finance 
+                Association, where I explore my passion for finance, and UTFR, a 
+                Formula racing design team that allows me to apply my engineering 
+                skills in a hands-on environment. I have always placed a strong 
+                emphasis on maintaining a top academic standing, believing that a 
+                solid foundation is essential for achieving my goals. 
+                Beyond my studies, I thrive on collaboration and innovation, 
+                constantly seeking opportunities to grow and learn from others in 
+                both academic and extracurricular settings.
+                </p>
+            </div>
+            <div class="info-box right">
+                <h3>Finance & ML Enthusiast</h3>
+                <p>Although my major is in ECE, I have a strong passion for both finance and 
+                    machine learning, and I aim to pursue a career in finance or fintech, 
+                    where I can merge my technical expertise with financial analysis. This past 
+                    summer, I conducted international research in Bangkok, Thailand, where I 
+                    explored how Generative AI can capture major stock patterns. I developed and 
+                    refined a TimeGAN model, evaluating its performance using an XGBoost 
+                    classification model. This project, along with my broader interest in machine 
+                    learning, further fueled my enthusiasm for leveraging AI to drive innovation 
+                    in financial forecasting and decision-making.
+                </p>
+            </div>
+            <div class="info-box left">
+                <h3>Core Beliefs</h3>
+                <p>I firmly believe that technology has the power to drive innovation and 
+                    bring about meaningful, positive change in the world. My passion lies in 
+                    finding creative ways to integrate AI into everyday life, making it a tool for 
+                    enhancing well-being and solving real-world problems. For me, it’s not just 
+                    about the work; I’m deeply family-oriented and always prioritize those 
+                    closest to me. Balancing my personal and professional life, I strive for 
+                    self-improvement every day, believing that growth—both as a person and as a 
+                    professional—is essential for making a lasting impact. I’m driven by the 
+                    idea that success 
+                    comes not just from what we achieve, but how we inspire and uplift those 
+                    around us.
+                </p>
+            </div>
+            <div class="info-box right">
+                <h3>Hobbies</h3>
+                <p>When I'm not working on AI models or developing new projects, 
+                    you'll likely find me in the gym or diving deep into my love for cars. 
+                    I weight train 4-5 times a week and am proud to say I can bench 225 lbs—fitness
+                    is a huge part of my life! I grew up swimming and practicing Taekwondo, where I earned my 2nd-degree black belt 
+                    and won several medals in regional tournaments. My passion for cars, carried over from my dad, also 
+                    inspired me to create my 
+                    own mobile car detailing business, S&P Detailing. When I’m unwinding, R&B 
+                    music is my go-to, with artists like PartyNextDoor, Tory Lanez, Bryson Tiller, 
+                    and The Weeknd constantly on repeat. 
+                    Check out my <a href="https://open.spotify.com/playlist/1siasQT9B2BcSplsVu8k8x?si=db1e1a7dac114ef4" target="_blank">Spotify playlist</a> to vibe with my favorites!
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <div class="project-inner">
+                    <div class="project-front">
+                        <h3>MediScan Pro</h3>
+                        <p>
+                        <img src="assets\images\person19_virus_50.jpeg" alt="MediScan Pro" class="project-image">
+                        </p>
+                    </div>
+                    <div class="project-back">
+                        <h3>Project Details</h3>
+                        <p> 
+                            I developed an AI-driven diagnostic system leveraging ResNet-50 for the classification of pneumonia from X-ray scans, achieving over 80% accuracy 
+                            on test data. This model not only provides accurate predictions but also generates automated, professional-grade medical reports to streamline 
+                            diagnostic processes. To make this tool accessible to healthcare professionals, I built a full-stack web application using Flask, complete with
+                             secure user authentication to safeguard patient data. The application enables users to upload X-ray images, receive real-time diagnostic feedback, 
+                             and easily generate downloadable reports in PDF format. By integrating HTML, CSS, and JavaScript, I ensured an intuitive, responsive interface that 
+                             delivers a seamless user experience from image upload to report generation, helping bring AI-driven insights into everyday medical workflows.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-inner">
+                    <div class="project-front">
+                        <h3>Sentivest AI</h3>
+                        <p>
+                        <img src="assets\images\stock_chart.png" alt="Investors Centre" class="project-image">
+                        </p>
+                    </div>
+                    <div class="project-back">
+                        <h3>Project Details</h3>
+                        <p> I developed the Sentivest AI Trading Bot, an algorithmic trading system that 
+                            makes automated decisions using Python, the Alpaca API, and 
+                            sentiment analysis. I integrated the FinBERT machine learning model to 
+                            assess the sentiment of news articles, driving buy and sell decisions with a 
+                            remarkable 99.9% confidence threshold. To minimize risk and optimize returns, 
+                            I designed bracket orders that included automatic take-profit and stop-loss 
+                            settings. Additionally, I backtested the trading strategy using three years 
+                            of historical data on the SPY (S&P 500 ETF) from Yahoo Finance, which 
+                            demonstrated a consistent pattern of profitable trades.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-inner">
+                    <div class="project-front">
+                        <h3>Investors Center</h3>
+                        <p>
+                        <img src="assets\images\wolf_wallstreet.jpg" alt="Investors Centre" class="project-image">
+                        </p>
+                    </div>
+                    <div class="project-back">
+                        <h3>Project Details</h3>
+                        <p>I developed a responsive web application with a 
+                            user-friendly interface using Python, Flask, React JS, 
+                            and Tailwind CSS. To predict stock price movements, 
+                            I implemented LSTM and bi-directional LSTM models, 
+                            achieving 80% and 76% accuracy, respectively, which 
+                            demonstrates my proficiency in machine learning and 
+                            time series analysis. Additionally, I integrated the 
+                            GPT-3.5 Medium API via Hugging Face to create an 
+                            nteractive finance chatbot that delivers real-time, 
+                            company-specific financial information, enhancing user 
+                            engagement and providing actionable insights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-inner">
+                    <div class="project-front">
+                        <h3>ZooTopia!</h3>
+                        <p>
+                            <img src="assets\images\zootopia.jpg" alt="Investors Centre" class="project-image">
+                        </p>
+                    </div>
+                    <div class="project-back">
+                        <h3>Project Details</h3>
+                        <p>I developed a turn-based, two-player combat game in Java,
+                            utilizing object-oriented programming (OOP) principles 
+                            and JavaFX for a user-friendly graphical interface. 
+                            The game features randomized maps with unique bonuses 
+                            and eight specialized animal characters, enhancing 
+                            strategic gameplay. I collaborated closely with a team 
+                            of three, actively participating in code reviews, 
+                            feature integration, and problem-solving to ensure 
+                            smooth gameplay mechanics and an intuitive user 
+                            experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+            <div class="project">
+                <div class="project-inner">
+                    <div class="project-front">
+                        <h3>Automated Plant Watering System</h3>
+                        <p>
+                        <img src="assets\images\praxis1.png" alt="Investors Centre" class="project-image">
+                        </p>
+                    </div>
+                    <div class="project-back">
+                        <h3>Project Details</h3>
+                        <p> At the University of Toronto, I designed a custom 3D-printed vase system 
+                            using Fusion 360 for the Engineering Science plant mascot, Yucca Gigantea. 
+                            I integrated a precision water sensor, programmed to meet the plant's specific 
+                            needs, which activates a bottom-mounted water mister through Arduino and 
+                            Raspberry Pi components.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project", id="lexilink">
+                <div class="project-inner">
+                    <div class="project-front">
+                        <h3>LexiLink</h3>
+                        <p>
+                        <img src="assets\images\ai_pic2.png" alt="Investors Centre" class="project-image">
+                        </p>
+                    </div>
+                    <div class="project-back">
+                        <h3>Project Details</h3>
+                        <p> I developed a Python-based semantic similarity predictor 
+                            that utilizes cosine similarity to measure the likeness 
+                            between words and sentences. The core of the project 
+                            involves constructing semantic descriptors from text 
+                            files, capturing the contextual relationships between 
+                            words based on their co-occurrence within sentences. 
+                            By comparing vectors representing words, the model 
+                            computes their similarity and identifies potential 
+                            synonyms. This tool, with an accuracy rate of 80%, is 
+                            capable of enhancing AI-generated text by suggesting 
+                            meaningful and contextually relevant word substitutions, 
+                            significantly improving the personalization and quality 
+                            of automated writing. The model’s efficiency is driven 
+                            by advanced vectorized calculations and the flexibility 
+                            to process large text datasets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- GSAP and Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+a
